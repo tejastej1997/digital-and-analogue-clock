@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./time.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="current-time-display">
+            <div class="country-name">India</div>
+            <div class="analog-clock">
+                <div class="center"></div>
+                <div class="minhand" id="minhand"></div>
+                <div class="sechand" id="sechand"></div>
+                <div class="hourhand" id="hourhand"></div>
+                <span style="--i:1"> <b>1</b> </span>
+                <span style="--i:2"> <b>2</b> </span>
+                <span style="--i:3"> <b>3</b> </span>
+                <span style="--i:4"> <b>4</b> </span>
+                <span style="--i:5"> <b>5</b> </span>
+                <span style="--i:6"> <b>6</b> </span>
+                <span style="--i:7"> <b>7</b> </span>
+                <span style="--i:8"> <b>8</b> </span>
+                <span style="--i:9"> <b>9</b> </span>
+                <span style="--i:10"> <b>10</b> </span>
+                <span style="--i:11"> <b>11</b> </span>
+                <span style="--i:12"> <b>12</b> </span>
+            </div>
+            <div id="current-time"></div>
+            <div id="currentdate"></div>
+        </div>
+
+
+        <div class="time-display">
+            <select name="" id="select" onchange="printvalue()">
+                <option value="">Select country here</option>
+            </select>
+            <div class="details" id="details">
+                <div class="analog-clock">
+                    <div class="center"></div>
+                    <div class="minhand" id="sminhand"></div>
+                    <!-- <div class="sechand" id="ssechand"></div> -->
+                    <div class="hourhand" id="shourhand"></div>
+                    <span style="--i:1"> <b>1</b> </span>
+                    <span style="--i:2"> <b>2</b> </span>
+                    <span style="--i:3"> <b>3</b> </span>
+                    <span style="--i:4"> <b>4</b> </span>
+                    <span style="--i:5"> <b>5</b> </span>
+                    <span style="--i:6"> <b>6</b> </span>
+                    <span style="--i:7"> <b>7</b> </span>
+                    <span style="--i:8"> <b>8</b> </span>
+                    <span style="--i:9"> <b>9</b> </span>
+                    <span style="--i:10"> <b>10</b> </span>
+                    <span style="--i:11"> <b>11</b> </span>
+                    <span style="--i:12"> <b>12</b> </span>
+                </div>
+                <div id="selectedtime"></div>
+                <div id="selecteddate"></div>
+            </div>
+
+        </div>
+
+        <div class="clock2">
+            <!-- <label for="">Click here to add clock</label> -->
+            <button id="addbutton">+</button>
+
+            <div class="time-display hide" id="clock2">
+                <select name="" id="cselect" onchange="cprintvalue()">
+                    <option value="">Select country here</option>
+                </select>
+                <div class="details" id="cdetails">
+                    <div class="analog-clock">
+                        <div class="center"></div>
+                        <div class="minhand" id="csminhand"></div>
+                        <!-- <div class="sechand" id="ssechand"></div> -->
+                        <div class="hourhand" id="cshourhand"></div>
+                        <span style="--i:1"> <b>1</b> </span>
+                        <span style="--i:2"> <b>2</b> </span>
+                        <span style="--i:3"> <b>3</b> </span>
+                        <span style="--i:4"> <b>4</b> </span>
+                        <span style="--i:5"> <b>5</b> </span>
+                        <span style="--i:6"> <b>6</b> </span>
+                        <span style="--i:7"> <b>7</b> </span>
+                        <span style="--i:8"> <b>8</b> </span>
+                        <span style="--i:9"> <b>9</b> </span>
+                        <span style="--i:10"> <b>10</b> </span>
+                        <span style="--i:11"> <b>11</b> </span>
+                        <span style="--i:12"> <b>12</b> </span>
+                    </div>
+                    <div id="cselectedtime"></div>
+                    <div id="cselecteddate"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="time-difference">
+            <button id="btn" onclick="diffgmt()">Calculate the difference</button>
+            <div id="diff-time"></div>
+        </div>
+    </div>
+
+    <!-- <div class="pause">
+        <button><i class="fa-sharp fa-regular fa-less-than"></i> 
+            
+        </button>
+        <button id="">
+            <i class="fa-solid fa-pause" id="pause"></i>
+            <svg>
+                <circle cx="30" cy="30" r="30" ></circle>
+            </svg>
+        
+        </button>
+        <button><i class="fa-solid fa-greater-than"></i></button>
+    </div> -->
+
+
+
+
+    <script src="./time.js"></script>
+</body>
+
+</html>
