@@ -49,7 +49,7 @@ addbutton.addEventListener('click',()=>{
 })
 
 let timezone =async () => {
-  await  fetch('http://worldtimeapi.org/api/timezone')
+  await  fetch('https://worldtimeapi.org/api/timezone')
         .then((data) => {
             return data.json();
         })
@@ -80,7 +80,7 @@ let printvalue  = async () => {
 
     let selectedvalue = select.value;
 
-    await fetch(`http://worldtimeapi.org/api/timezone/${selectedvalue}`)
+    await fetch(`https://worldtimeapi.org/api/timezone/${selectedvalue}`)
         .then((time) => {
             return time.json();
         })
@@ -121,7 +121,7 @@ let printvalue  = async () => {
 let cprintvalue = () => {
     let selectedvalue = cselect.value;
 
-    fetch(`http://worldtimeapi.org/api/timezone/${selectedvalue}`)
+    fetch(`https://worldtimeapi.org/api/timezone/${selectedvalue}`)
         .then((time) => {
             return time.json();
         })
